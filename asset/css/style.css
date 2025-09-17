@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@400..700&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nerko+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Edu Tas Beginner';
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+.container_header {
+    background-image: url("../img/wall.png");
+    background-size: cover;
+    background-position: center;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container_header h1 {
+    font-size: 90px;
+}
+
+.container_main {
+    background-image: url("../img/cork.png");
+    background-repeat: repeat;
+    background-size: 320px auto;
+    background-position: center top;
+    min-height: calc(100vh - 150px);
+    display: grid;
+    place-items: center;
+    padding: 24px 24px 48px;
+}
+
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 36px 28px;
+    width: min(1100px, 92vw);
+    justify-items: center;
+}
+
+
+.polaroid {
+    position: relative;
+    width: 300px;
+    background: #fff;
+    padding: 12px 12px 32px;
+    box-shadow: 0 10px 18px rgba(0, 0, 0, 0.35);
+    text-align: center;
+    margin: 0 auto;
+}
+
+.polaroid img.photo {
+    width: 100%;
+    display: block;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.06);
+}
+
+.date {
+    font-family: 'Edu TAS Beginner';
+    margin-top: 10px;
+    font-size: 16px;
+    font-style: italic;
+    text-align: left;
+}
+
+.title {
+    font-family: 'Edu TAS Beginner';
+    margin-top: 10px;
+    font-size: 2.5rem;
+    font-weight: 800;
+    text-align: left;
+}
+
+.pin {
+    position: absolute;
+    top: -18px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: auto;
+    z-index: 2;
+    filter: drop-shadow(0 3px 3px rgba(0, 0, 0, 0.35));
+}
+
+
+@media (max-width: 1024px) and (min-width: 600px) {
+    .container_header {
+        height: 160px;
+    }
+
+    .container_header h1 {
+        font-family: "Nerko One", system-ui, sans-serif;
+        font-size: clamp(56px, 8vw, 88px);
+        letter-spacing: 1px;
+    }
+
+    .container_main {
+        padding: 32px 24px;
+    }
+
+    .board {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 56px 48px;
+        width: min(900px, 94vw);
+    }
+
+    .polaroid {
+        width: 340px;
+        padding: 14px 14px 34px;
+    }
+
+    .polaroid p {
+        font-size: 15px;
+        line-height: 1.35;
+    }
+
+    .pin {
+        top: -20px;
+        width: 42px;
+    }
+}
+
+@media (max-width: 599px) {
+    .container_header {
+        height: 120px;
+    }
+
+    .container_header h1 {
+        font-family: "Nerko One", system-ui, sans-serif;
+        font-size: clamp(40px, 10vw, 64px);
+    }
+
+    .container_main {
+        padding: 20px 16px;
+    }
+
+    .board {
+        grid-template-columns: 1fr;
+        gap: 28px 0;
+        width: min(520px, 96vw);
+    }
+
+    .polaroid {
+        width: min(92vw, 360px);
+    }
+
+    .pin {
+        top: -18px;
+        width: 38px;
+    }
+}
