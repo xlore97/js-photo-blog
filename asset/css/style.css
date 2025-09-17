@@ -100,7 +100,7 @@ body {
     }
 
     .container_header h1 {
-        font-family: "Nerko One", system-ui, sans-serif;
+        font-family: 'Edu TAS Beginner';
         font-size: clamp(56px, 8vw, 88px);
         letter-spacing: 1px;
     }
@@ -137,7 +137,7 @@ body {
     }
 
     .container_header h1 {
-        font-family: "Nerko One", system-ui, sans-serif;
+        font-family: 'Edu TAS Beginner';
         font-size: clamp(40px, 10vw, 64px);
     }
 
